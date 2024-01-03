@@ -10,5 +10,5 @@ spark = configure_spark_with_delta_pip(builder).getOrCreate()
 data = spark.range(0, 100)
 data.write.format("parquet")     \
            .mode("overwrite")    \
-           .save('/book/chapter02/parquetData')
+           .save('book/chapter02/parquetData')
 print(f"The number of partitions is: {data.rdd.getNumPartitions()}")

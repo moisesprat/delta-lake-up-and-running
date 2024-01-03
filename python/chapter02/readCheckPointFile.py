@@ -12,7 +12,7 @@ builder = pyspark.sql.SparkSession.builder.appName("MyApp") \
 spark = configure_spark_with_delta_pip(builder).getOrCreate()
 
 # Set our output path for our Delta files
-DATALAKE_PATH = "/book/chapter02/transactionLogCheckPointExample"
+DATALAKE_PATH = "book/chapter02/transactionLogCheckPointExample"
 CHECKPOINT_PATH = "/_delta_log/00000000000000000010.checkpoint.parquet"
 # Read the checkpoint.parquet file
 checkpoint_df =                                \

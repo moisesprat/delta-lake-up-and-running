@@ -1,4 +1,4 @@
-from msilib.schema import Condition
+#from msilib.schema import Condition
 import pyspark
 from pyspark.sql.functions import col, lit
 from delta import *
@@ -13,7 +13,7 @@ spark = configure_spark_with_delta_pip(builder).getOrCreate()
 # Create an array with the columns of our dataframe
 columns = ['patientId', 'name']
 
-DATALAKE_PATH = "/book/chapter02/UpdateOperation"
+DATALAKE_PATH = "book/chapter02/UpdateOperation"
 # =======================================================
 # Step 1 - First write
 # =======================================================

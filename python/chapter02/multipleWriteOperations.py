@@ -27,7 +27,7 @@ df = spark.createDataFrame(data, columns)
 # Write out the dataframe as a parquet file.
 df.coalesce(1).write                                          \
               .format("delta")                                \
-              .save('/book/chapter02/multipleWriteOperations') 
+              .save('book/chapter02/multipleWriteOperations') 
 
 # Create the data as an array of tuples
 data = [
@@ -42,7 +42,7 @@ df = spark.createDataFrame(data, columns)
 df.coalesce(1).write                               \
     .format("delta")                               \
     .mode("append")                                \
-    .save('/book/chapter02/multipleWriteOperations')
+    .save('book/chapter02/multipleWriteOperations')
 
 
 # Create the data as an array of tuples
@@ -58,4 +58,4 @@ df = spark.createDataFrame(data, columns)
 df.coalesce(1).write                                \
     .format("delta")                                \
     .mode("append")                                 \
-    .save('/book/chapter02/multipleWriteOperations')
+    .save('book/chapter02/multipleWriteOperations')

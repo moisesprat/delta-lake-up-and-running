@@ -20,4 +20,4 @@ df = spark.range(0, 10)
 df.write                                 \
   .format("delta")                       \
   .mode("overwrite")                     \
-  .save("/book/chapter02/helloDeltaLake")
+  .save("book/chapter02/helloDeltaLake")
